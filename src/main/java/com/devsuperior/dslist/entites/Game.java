@@ -17,13 +17,19 @@ public class Game {
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
 	private Long id;
 	private String title;
-	@Column(name = "year_game")//mudano referência ao nome para fugir da palavra reservada do sql
+	@Column(name = "game_year")//mudando referência ao nome para fugir da palavra reservada do sql
 	private int year;
-	private String genro;
-	private String plataform;
+	private String genre;
+	private String platforms;
+	private double score;
 	private String img_url;
-	private String shortDescription;
-	private String longDescritpion;
+	
+	@Column(columnDefinition = "TEXT")
+	private String short_description;
+		
+	@Column(columnDefinition = "TEXT")//CONFIGURA O ATRIBUTO PARA SER UM TEXTO COM MAIS DE 255 CARACTERES NO BANCO DE DADOS
+	private String long_description;
+	
 	
 	
 	
@@ -33,18 +39,21 @@ public class Game {
 
 
 
-	public Game(Long id, String title, int year, String genro, String plataform, String img_url,
-			String shortDescription, String longDescritpion) {
+	public Game(Long id, String title, int year, String genre, String platform, Double score ,String img_url,
+			String short_description, String long_description) {
 		
 		this.id = id;
 		this.title = title;
 		this.year = year;
-		this.genro = genro;
-		this.plataform = plataform;
+		this.genre = genre;
+		this.platforms = platform;
+		this.score = score;
 		this.img_url = img_url;
-		this.shortDescription = shortDescription;
-		this.longDescritpion = longDescritpion;
+		this.short_description = short_description;
+		this.long_description = long_description;
+		
 	}
+
 
 
 
@@ -84,26 +93,38 @@ public class Game {
 
 
 
-	public String getGenro() {
-		return genro;
+	public String getGenre() {
+		return genre;
 	}
 
 
 
-	public void setGenro(String genro) {
-		this.genro = genro;
+	public void setGenr(String genre) {
+		this.genre = genre;
 	}
 
 
 
-	public String getPlataform() {
-		return plataform;
+	public String getPlatforms() {
+		return platforms;
 	}
 
 
 
-	public void setPlataform(String plataform) {
-		this.plataform = plataform;
+	public void setPlatforms(String platforms) {
+		this.platforms = platforms;
+	}
+
+
+
+	public double getScore() {
+		return score;
+	}
+
+
+
+	public void setScore(double score) {
+		this.score = score;
 	}
 
 
@@ -120,26 +141,26 @@ public class Game {
 
 
 
-	public String getShortDescription() {
-		return shortDescription;
+	public String getShort_description() {
+		return short_description;
 	}
 
 
 
-	public void setShortDescription(String shortDescription) {
-		this.shortDescription = shortDescription;
+	public void setShort_description(String short_description) {
+		this.short_description = short_description;
 	}
 
 
 
-	public String getLongDescritpion() {
-		return longDescritpion;
+	public String getLong_descritpion() {
+		return long_description;
 	}
 
 
 
-	public void setLongDescritpion(String longDescritpion) {
-		this.longDescritpion = longDescritpion;
+	public void setLong_descritpion(String long_descritpion) {
+		this.long_description = long_descritpion;
 	}
 
 
