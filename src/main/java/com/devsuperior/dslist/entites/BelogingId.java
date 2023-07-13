@@ -14,7 +14,7 @@ public class BelogingId {
 	private Game game;
 	
 	@ManyToOne
-	@JoinColumn(name = "tb_game_list")
+	@JoinColumn(name = "list_id")
 	private GameList List;
 
 	public BelogingId() {
