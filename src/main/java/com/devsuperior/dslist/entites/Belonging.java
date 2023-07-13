@@ -30,17 +30,17 @@ public class Belonging {
 		this.position = position;
 	}
 
-	public BelogingId getPk() {
-		return pk;
+	public BelogingId getId() {
+		return id;
 	}
 
-	public void setPk(BelogingId pk) {
-		this.pk = pk;
+	public void setPk(BelogingId id) {
+		this.id = id;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(pk);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class Belonging {
 		if (getClass() != obj.getClass())
 			return false;
 		Belonging other = (Belonging) obj;
-		return Objects.equals(pk, other.pk);
+		return Objects.equals(id, other.id);
 	}
 	
 	
