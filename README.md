@@ -1,5 +1,5 @@
 # dslist
-Projeto criado no instensivo Java/Spring Boot da Dev Superior com professor Nélio Alves
+Projeto criado no instensivo Java/Spring Boot da DevSuperior com professor Nélio Alves
 Estamos conectando um banco de dados relacional a obejtos java e disponibilizando uma api para o front end utilizar.
 
 Aprendi:
